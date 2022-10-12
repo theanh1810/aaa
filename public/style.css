@@ -1,0 +1,8 @@
+/*STYLE*/
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700') ;
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,800,900');
+@import '../public/css/import/global.css';
+@import '../public/css/import/header.css';
+@import '../public/css/import/footer.css';
+@import '../public/css/import/home.css';
+@import '../public/css/import/table_selec.css'

@@ -1,0 +1,78 @@
+#header .head{
+    background: #3bbdfb;
+}
+#header .head .menu li,
+#header .head .support li
+{
+    color: #ffffff;
+    line-height: 14px;
+    padding: 9px 11px;
+    float: left ;
+}
+#header .head .support li>i{
+    padding-right: 7px ;
+}
+#header .head .menu li{
+    padding: 0 ;
+}
+#header .head .menu>li>a{
+    border-left: 1px solid #e2e2e2 ;
+    padding: 9px 12px ;
+    display: inline-block;
+    color: #ffffff ;
+}
+#header .head .menu li:nth-child(1) a{
+    border-left: unset;  
+}
+#header .head .support li:nth-child(1){
+    padding-left: 0 ;  
+}
+#header #logo{
+    padding: 28px 0 ;
+    font-family: Montserrat;
+    text-transform: uppercase;
+}
+#header #logo .title{
+    font-size: 85px;
+    line-height: initial;
+    font-weight: 800;
+    color: #454545 ;
+}
+#header #logo .title>.last{
+    color: #3bbdfb ;
+}
+#header #logo .title:hover .last{
+    color: #3bbdfb ;
+}
+#header #logo .describe{
+    font-size: 20px;
+}
+#header #main-menu>li>a{
+    display: block;
+    font-size: 16px;
+    padding: 28px 15px;
+    color: #2a2b2c;
+}
+#header .footer #main-menu{
+    border: solid 3px #d9d9d9;
+    border-right: unset;
+    border-left: unset;
+}
+#header #main-menu>li{
+    display: inline-block;
+}
+#header #main-menu>li>a:after{
+    font-family: Fontawesome ;
+    content: '\f101';
+    padding-left: 4px ;
+}
+#header #main-menu>li>a:hover{
+    background: #f7f7f7;
+    color: #3bbdfb;
+}
+#header #main-menu>li:last-child a:after{
+    content: '' ;
+}
+#header {
+    position: relative;
+}
