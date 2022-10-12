@@ -117,9 +117,10 @@ $(window).ready(function () {
     "click",
     function () {
       if ($("*").dataset.type.toString() == "link-text") {
+         $(".table-selection").removeClass("hidden")
       $(".table-selection").toggle()
     }
-    
+   
     }
   );
 
