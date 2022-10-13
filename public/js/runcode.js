@@ -133,9 +133,8 @@ $(window).ready(function () {
   });
 
   //mo bang chon link-img
-  $("*[data-type='link-img']").bind(
-    "click",
-    function () {
+  $("*[data-type='link-img']").bind("click",function () {
+      console.log("a")
       if ($(".table-selection").hasClass("hidden")) {
         $(".table-selection").removeClass("hidden");
       } else if (
@@ -150,9 +149,8 @@ $(window).ready(function () {
       if (!$(".html-extra").hasClass("hidden")) {
         $(".html-extra").addClass("hidden");
       }
-    },
-    "click",
-    function (e) {}
+    }
+    
   );
 
   $textInput = $("#btn-edit").val();
@@ -195,6 +193,11 @@ $(window).ready(function () {
 
   //   }
   // );
+
+  //diable the a
+  $("a").bind("click", function(e){
+    e.preventDefault();
+  })
 
   //  them o nhap
 
