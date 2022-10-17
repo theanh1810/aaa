@@ -115,7 +115,7 @@ $(window).ready(function () {
   });
 
   //mo bang chon link-text
-  $("*[data-type='link-text']").bind("click", function (e) {
+  $("*[data-type='link-text']").bind("click", function () {
     if ($(".table-selection").hasClass("hidden")) {
       $(".table-selection").removeClass("hidden");
     } else if (
@@ -127,14 +127,61 @@ $(window).ready(function () {
     if ($(".set-text").hasClass("hidden")) {
       $(".set-text").removeClass("hidden");
     }
-    if (!$(".html-extra").hasClass("hidden")) {
-      $(".html-extra").addClass("hidden");
+    if(!$(".set_size").hasClass("hidden") && !$(".set_border").hasClass("hidden")){
+      $(".set_size").addClass("hidden")
+      $(".set_border").addClass("hidden")
     }
+    $target = $(this);
+    $(".font_family li").click(function(){
+      $(".set_font_family").html($(this).html())
+      $target.css("fontFamily", `${$(this).html()}`)
+      $("#font-family-open").css("display", "none")
+    })
+    $("#font-size-open ul li").click(function(){
+      console.log($(this).html())
+      $("#set-font-size").val($(this).html())
+      $target.css("fontSize", `${$(this).html()}`)
+      $("#font-size-open").css("display", "none")
+    })
+
+    //Font
+    $(".text-bold").click(function(){
+      $target.css("fontWeight", 'bold')
+    })
+    $(".text-italic").click(function(){
+      $target.css("fontStyle", 'italic')
+    })
+    $(".text-des").click(function(){
+      $target.css("textDecoration", 'underline')
+    })
+    $(".text-des-t").click(function(){
+      $target.css("textDecoration", 'line-through')
+    })
+    $(".text-upper").click(function(){
+      $target.css("textTransform", 'uppercase')
+    })
+    //text-align
+    $(".text-left").click(function(){
+      $target.css("textAlign", 'left')
+    })
+    $(".text-right").click(function(){
+      $target.css("textAlign", 'right')
+    })
+    $(".text-center").click(function(){
+      $target.css("textAlign", 'center')
+    })
+    $(".text-justify").click(function(){
+      $target.css("textAlign", 'justify')
+    })
+
+    //color
+    $(".color input").on( 'input' , function(){
+      $target.css("color", `${$(this).val()}`)
+    })
   });
 
   //mo bang chon link-img
   $("*[data-type='link-img']").bind("click",function () {
-      console.log("a")
       if ($(".table-selection").hasClass("hidden")) {
         $(".table-selection").removeClass("hidden");
       } else if (
@@ -146,23 +193,47 @@ $(window).ready(function () {
       if (!$(".set-text").hasClass("hidden")) {
         $(".set-text").addClass("hidden");
       }
-      if (!$(".html-extra").hasClass("hidden")) {
-        $(".html-extra").addClass("hidden");
+      if($(".set_size").hasClass("hidden") && $(".set_border").hasClass("hidden")){
+        $(".set_size").removeClass("hidden")
+        $(".set_border").removeClass("hidden")
       }
+      $target = $(this);
+       //set size img
+    $(".width").on('input', function(){
+      $target.css("width", `${$(this).val()}px`)
+    })
+    $(".height").on('input', function(){
+      $target.css("height", `${$(this).val()}px`)
+    })
+
+    //set border
+    $("#border").on('input', function(){
+      $target.css("borderRadius", `${$(this).val()}px`)
+    })
+
     }
     
   );
 
-  $textInput = $("#btn-edit").val();
-  $linkInput = $("#btn-link").val();
+  
+
+  
 
   //them doi tuong
 
-  $("[data-type=list],.support").bind("click", function () {
-    $(".support>li:last-child").append(
+  $("#edit").bind("click", function () {
+    $(".support").append(
       ` <li data-type="link-text"><i class="fa fa-mobile" aria-hidden="true"></i><span class="number-11">+565 975 658</span></li>`
     );
+    $(".table-selection").addClass("hidden");
   });
+
+  //sua doi tuong
+  $("#add").bind("click", function(){
+    $textInput = $("#btn-edit").val();
+    $linkInput = $("#btn-link").val();
+    console.log($textInput, $linkInput)
+  })
 
   //mo bang chon list
 

@@ -536,7 +536,7 @@
                                     Phông chữ
                                 </div>
                                 <div class="d-flex col-6 font-family-selec ai-center ">
-                                    <div class="open-sans col-9 ai-center jc-center">
+                                    <div class="open-sans col-9 ai-center jc-center set_font_family">
                                         Open Sans
                                     </div>
                                     <div class="d-flex col-2 ai-center jc-center" id="more-font" style="color:black ;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
@@ -545,7 +545,7 @@
                                 </div>
                                 <!-- them class d-flex -------------------------------->
                                 <div class="hidden col-12 jc-center  absolute" id="font-family-open">
-                                    <ul class="d-flex col-12">
+                                    <ul class="d-flex col-12 font_family">
                                         <li class="d-flex col-6 Impact">Impact</li>
                                         <li class="d-flex col-6 Muli">Muli</li>
                                         <li class="d-flex col-6 Roboto">Roboto</li>
@@ -565,14 +565,14 @@
                                 </div>
                                  <div class="d-flex col-6 font-size-selec ai-center jc-center" id="size-click">
                                     <div class="open-sans col-8 ai-center jc-center">
-                                        <input type="number" step="2" min="8" max="32" class="col-12" value="8" >
+                                        <input type="number" step="2" min="8" max="32" class="col-12" value="8" id="set-font-size">
                                     </div>
                                     <div class="d-flex col-3 ai-center jc-center" style="color:black ;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
                                         <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
                                         </svg></div>
                                 </div>
                                 <!-- them class d-flex ------------------------------------------------->
-                                <div class="hidden col-6 jc-center absolute" style="height: 133px; z-index: 3; background-color: #F9F9F9;" >
+                                <div class="hidden col-6 jc-center absolute" style="height: 133px; z-index: 3; background-color: #F9F9F9;" id="font-size-open">
                                     <ul class="d-flex ai-center jc-center col-12 f-col">
                                        <li class="col-12">8</li>
                                        <li class="col-12">9</li>
@@ -720,7 +720,7 @@
     <!--  can le va mau sac -->
 
 
-   <div class="border-parent">
+   <div class="border-parent set_size">
        <div class="container-fluid">
            <div class="row">
                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
@@ -729,11 +729,11 @@
                         <div class="d-flex col-12 jc-center">
                             <div class="d-flex jc-center mg-top-2 col-5">
                                 <label for="" class="col-2 d-flex ai-center font-selec-tmi">W</label>
-                                <input class="col-9 mg-top-2" type="text" placeholder="Chiều Rộng">
+                                <input class="col-9 mg-top-2 width" type="number" value="1" placeholder="Chiều Rộng">
                             </div>
                             <div class="d-flex jc-center col-5 mg-top-2 offset-1">
                                 <label for="" class="col-2 d-flex ai-center font-selec-tmi">H</label>
-                                <input class="col-9 mg-top-2" type="text" placeholder="Chiều Cao">
+                                <input class="col-9 mg-top-2 height" type="number" value="1" placeholder="Chiều Cao">
                             </div>
                         </div>
                     </div>
@@ -742,7 +742,7 @@
        </div>
    </div>
 
-   <div class="border-parent">
+   <div class="border-parent set_border">
        <div class="container-fluid">
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
@@ -752,7 +752,7 @@
                       </div>
                           <div class="d-flex ai-center col-12 mg-top-2 offset-1">
                                 <label for="" class="col-3 d-flex ai-center font-selec-tmi">Kích Thước</label>
-                                <input class="col-2 offset-1" type="number" step="1" min="0" max="32" class="col-12" value="0">
+                                <input class="col-2 offset-1" type="number" step="1" min="0" max="32" class="col-12" value="0" id="border">
                             </div>
                     </div>
                 </div>
