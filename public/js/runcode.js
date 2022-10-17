@@ -137,28 +137,72 @@ $(window).ready(function () {
       $target.css("fontFamily", `${$(this).html()}`)
       $("#font-family-open").css("display", "none")
     })
+
     $("#font-size-open ul li").click(function(){
-      console.log($(this).html())
       $("#set-font-size").val($(this).html())
       $target.css("fontSize", `${$(this).html()}`)
       $("#font-size-open").css("display", "none")
     })
+    $("#set-font-size").on("input", function(){
+      $target.css("fontSize", `${$(this).val()}`)
+
+    })
 
     //Font
     $(".text-bold").click(function(){
-      $target.css("fontWeight", 'bold')
+     if($(this).hasClass("sign")){
+      $target.css("fontWeight", 'normal');
+
+     }
+     else{
+      $target.css("fontWeight", 'bold');
+     }
+     $(this).toggleClass("sign");
+
     })
     $(".text-italic").click(function(){
-      $target.css("fontStyle", 'italic')
+      if($(this).hasClass("sign")){
+        $target.css("fontStyle", 'normal');
+  
+       }
+       else{
+        $target.css("fontStyle", 'italic')
+       }
+       $(this).toggleClass("sign");
+    
     })
     $(".text-des").click(function(){
-      $target.css("textDecoration", 'underline')
+      if($(this).hasClass("sign")){
+        $target.css("textDecoration", 'none');
+  
+       }
+       else{
+        $target.css("textDecoration", 'underline')
+       }
+       $(this).toggleClass("sign");
+   
     })
     $(".text-des-t").click(function(){
-      $target.css("textDecoration", 'line-through')
+      if($(this).hasClass("sign")){
+        $target.css("textDecoration", 'none');
+  
+       }
+       else{
+        $target.css("textDecoration", 'line-through')
+       }
+       $(this).toggleClass("sign");
+    
     })
     $(".text-upper").click(function(){
-      $target.css("textTransform", 'uppercase')
+      if($(this).hasClass("sign")){
+        $target.css("textTransform", 'none');
+  
+       }
+       else{
+        $target.css("textTransform", 'uppercase')
+       }
+       $(this).toggleClass("sign");
+     
     })
     //text-align
     $(".text-left").click(function(){
